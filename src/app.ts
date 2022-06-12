@@ -1,9 +1,9 @@
 import express from 'express'
-import routes from './routes'
+import VehicleRoutes from './routes/VehicleRoutes'
 
 const app = express()
 
 app.use(express.json())
-app.use(routes)
+app.use(VehicleRoutes)
 
 export default app
