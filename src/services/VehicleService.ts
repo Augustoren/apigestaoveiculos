@@ -43,6 +43,11 @@ export default {
 
   async updateVehicle(id: string, vehicle: VehicleRequest) {
 
+    const vehicleExists = await VehicleRepository.findVehicleById(id);
+    if (!vehicleExists) {
+      return VehicleResponse.vehicleResponse(404, { message: "Vehicle not found" });
+    }
+
     const vehicleEntity: VehicleEntity = {
       id,
       brand: vehicle.brand,
