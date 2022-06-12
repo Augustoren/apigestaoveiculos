@@ -1,0 +1,130 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": " Vehicle manager API",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Augusto Renan",
+      "url": "http://www.github.com/augustoren",
+      "email": "augustorendev@gmail.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local server"
+    },
+    {
+      "url": "http://apigestaoveiculos-env.eba-ntwbhmpz.sa-east-1.elasticbeanstalk.com/",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/vehicles": {
+      "post": {
+        "tags": [
+          "Vehicles"
+        ],
+        "summary": "List all vehicles",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vehicle"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Vehicle already exists"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/200VehicleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Vehicle": {
+        "properties": {
+          "brand": {
+            "type": "string",
+            "example": "Volkswagen"
+          },
+          "model": {
+            "type": "string",
+            "example": "Fusca"
+          },
+          "year": {
+            "type": "string",
+            "example": "2020"
+          },
+          "color": {
+            "type": "string",
+            "example": "Sedan"
+          },
+          "license_plate": {
+            "type": "string",
+            "example": "ABC1234"
+          },
+          "chassis_number": {
+            "type": "string",
+            "example": "b0b9c22d-13c5-4683-9da4-e356fc5958b9"
+          },
+          "type": {
+            "type": "string",
+            "example": "Sedan"
+          }
+        }
+      },
+      "200VehicleResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "b0b9c22d-13c5-4683-9da4-e356fc5958b9"
+          },
+          "brand": {
+            "type": "string",
+            "example": "Volkswagen"
+          },
+          "model": {
+            "type": "string",
+            "example": "Fusca"
+          },
+          "year": {
+            "type": "string",
+            "example": "2020"
+          },
+          "color": {
+            "type": "string",
+            "example": "Red"
+          },
+          "license_plate": {
+            "type": "string",
+            "example": "ABC1234"
+          },
+          "chassis_number": {
+            "type": "string",
+            "example": "b0b9c22d-13c5-4683-9da4-e356fc5958b9"
+          },
+          "type": {
+            "type": "string",
+            "example": "Sedan"
+          }
+        }
+      }
+    }
+  }
+}
