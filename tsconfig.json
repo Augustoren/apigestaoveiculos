@@ -6,5 +6,8 @@
     "outDir": "./app",
     "rootDir": "./src",
     "esModuleInterop": true
-  }
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
