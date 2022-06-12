@@ -54,7 +54,8 @@ export default {
       type: vehicle.type
     }
 
-    const updatedVehicle = await VehicleRepository.updateVehicle(id, vehicleEntity);
+    await VehicleRepository.updateVehicle(id, vehicleEntity);
+    const updatedVehicle = await VehicleRepository.findVehicleById(id);
     return VehicleResponse.vehicleResponse(200, updatedVehicle);
   },
 

@@ -7,7 +7,7 @@ const routes = Router()
 routes.get("/vehicles", VehicleController.findAllVehicles)
 routes.get("/vehicles/:id", VehicleController.findVehicleById)
 routes.post("/vehicles", validateVehicleRequest, VehicleController.createVehicle)
-routes.put("/vehicles", validateVehicleRequest, VehicleController.updateVehicle)
+routes.put("/vehicles/:id", VehicleController.updateVehicle)
 routes.delete("/vehicles/:id", VehicleController.deleteVehicle)
 
 export default routes

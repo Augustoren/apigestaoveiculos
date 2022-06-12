@@ -6,7 +6,7 @@ const development = {
   migrations: {
     directory: "./src/database/migrations/",
   },
-  useNullasDefault: true,
+  useNullAsDefault: true,
 }
 
 module.exports = { development }
