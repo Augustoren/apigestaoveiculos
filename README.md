@@ -18,15 +18,22 @@ Esta API é uma documentação de como subir uma aplicação Typescript para a A
 
 **Back-end:** Node, Typescript, Express, Knex.js, SQLite3.
 
-**Deploy:** ElasticBeanStalk.
+**Deploy:** AWS.
 
-**CI/CD:** Github, CodeBuild, CodePipeline.
+**CI/CD:** Github, ElasticBeanStalk, CodeBuild, CodePipeline.
+
+**Documentação:** Swagger
 
 
 
 ## Demonstração
 
 Você pode testar a aplicação [clicando aqui](http://apigestaoveiculos-env.eba-ntwbhmpz.sa-east-1.elasticbeanstalk.com/)
+
+## Documentação
+
+[Documentação (work in progress)](http://apigestaoveiculos-env.eba-ntwbhmpz.sa-east-1.elasticbeanstalk.com/api-docs/)
+
 
 ## Rodando localmente
 
